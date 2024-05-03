@@ -29,7 +29,25 @@ Of all the features, age seemed to have the most impact on the target variable
 
 ### Data Formulation
 
-The goal was to use machine learning to predict whether a customer would leave (churn) or stay in this particular bank, basing it's predictions on prior recorded data in the form of a dataset. The input contained features that were used to predict the classes withing the target variable, e.g. estimated salary, geography, how long the customer stayed with the bank (tenure), etc. XGB was primarily used and tuned, however Random Forest and Decision Tree were also initially compared. Decision Tree was initially picked under the guise of ease of use and amateur-friendly properties. Random Forest was picked due to its robustness and overall higher complexity in relation to decision tree. XGB in part for this same reason, as well as its reputation for effective predictive ability.
+The goal was to use machine learning to predict whether a customer would leave (churn) or stay in this particular bank, basing it's predictions on prior recorded data in the form of a dataset. The input contained features that were used to predict the classes withing the target variable, e.g. estimated salary, geography, how long the customer stayed with the bank (tenure), etc. XGB was primarily used and tuned, however Random Forest and Decision Tree were also initially compared. Decision Tree was initially picked under the guise of ease of use and amateur-friendly properties. Random Forest was picked due to its robustness and overall higher complexity in relation to decision tree. XGB in part for this same reason, as well as its reputation for effective predictive ability. After evaluation of all three models, XGB was ultimately used and its hyperparameters fine-tuned through gridsearch. 
+
+### Training
+Hardware was of no concern, however some freezing and long execution times were experienced, though that was partly expected.
+
+### Performance Comparison
+
+The three best performing models included XGB with gridsearch hyperparameter tuning, XGB with SMOTE and hyperparameter tuning, and XGB with bayesian optimization hyperparameter tuning. XGB with bayesian hyperparameter tuning proved to be the most effective, even if only slightly. It performed slightly better in accuracy, and slightly better overall in recall for the positive and negative class. ROC stayed largely the same throughout however took a slight dip when SMOTE was implemented.
+
+![table](https://github.com/Meks7/Churn-Kaggle-Challenge/assets/144177911/85128333-1e15-478f-8caa-0d097921351f)
+
+
+![R curve](https://github.com/Meks7/Churn-Kaggle-Challenge/assets/144177911/27b1bd23-a64d-4e37-9f7e-4cfd19c0e1fd)
+
+R-Curve of best Model
+
+### Conclusions
+
+XGB, though can be quite complicated, is efficient at predictive modeling and can be easily interpreted depending on what it is being used for. Overall, SMOTE seemed to not have a very good overall effect on the model, but may be useful when it comes to positive class recall (churn).
 
 _______________________________________________________________________
 
