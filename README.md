@@ -14,6 +14,22 @@ The training data was comprised of 165035 rows and about 14 columns. The test da
 
 The dataset contained no missing values, however there outliers that heavily skewed some of the deatures. Most of the numerical features (the ones that were not encoded) were standardized. Some of the features were dropped due to having no relevance to the algorithm (e.g. Customer ID). One-hot encoding was applied to the two remaining categorical variables (Geography and Gender).
 
+#### Visualization
+![credit score ss](https://github.com/Meks7/Churn-Kaggle-Challenge/assets/144177911/bdb02a7d-bca0-4177-b245-269e6bc8161f)
+
+Much of the data was skewed slightly left or slightly right
+
+![balance ss](https://github.com/Meks7/Churn-Kaggle-Challenge/assets/144177911/ea07a6dc-a7a2-4f96-a4ad-e92bdbe93acf)
+
+While other data contained outliers.
+
+![Corr Heatmap](https://github.com/Meks7/Churn-Kaggle-Challenge/assets/144177911/4fbdeede-efbe-46e4-bc92-0ff773f2a129)
+
+Of all the features, age seemed to have the most impact on the target variable
+
+### Data Formulation
+
+The goal was to use machine learning to predict whether a customer would leave (churn) or stay in this particular bank, basing it's predictions on prior recorded data in the form of a dataset. The input contained features that were used to predict the classes withing the target variable, e.g. estimated salary, geography, how long the customer stayed with the bank (tenure), etc. XGB was primarily used and tuned, however Random Forest and Decision Tree were also initially compared. Decision Tree was initially picked under the guise of ease of use and amateur-friendly properties. Random Forest was picked due to its robustness and overall higher complexity in relation to decision tree. XGB in part for this same reason, as well as its reputation for effective predictive ability.
 
 _______________________________________________________________________
 
